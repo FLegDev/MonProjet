@@ -1,7 +1,6 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from .views import generate_invoice
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('pdf/', include('pdf_reports.urls')),
+    path('generate-invoice/', generate_invoice, name='generate_invoice'),
 ]

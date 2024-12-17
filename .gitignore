@@ -1,0 +1,59 @@
+# Environnement virtuel
+venv/
+env/
+
+# Fichiers compilés Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers temporaires et logs
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Base de données locale
+db.sqlite3
+*.sqlite3
+
+# Static et media (selon votre configuration)
+static/
+media/
+
+# Paramètres secrets (si utilisés dans un fichier)
+.env
+*.secret
+
+# Dépendances Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Configurations IDE (PyCharm, VSCode, etc.)
+.idea/
+.vscode/
+*.iml
+
+# Fichiers de tests
+.coverage
+.tox/
+nosetests.xml
+*.test
+
+# Rapports de couverture
+htmlcov/
+
+# Caches de Django
+*.cache/
+*.pyc
+
+# Fichiers générés par WeasyPrint
+*.pdf
+
+# Autres fichiers inutiles
+Thumbs.db
+.DS_Store
