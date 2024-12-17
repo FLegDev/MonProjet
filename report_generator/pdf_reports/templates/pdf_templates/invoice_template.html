@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ css_url }}">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .header { text-align: center; font-size: 1.5em; margin-bottom: 20px; }
+        .content { margin: 20px; }
+        .footer { position: fixed; bottom: 0; text-align: center; font-size: 0.8em; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        {{ title }}
+    </div>
+    <div class="content">
+        <h3>Résumé :</h3>
+        <p>{{ summary }}</p>
+
+        <h3>Tableau :</h3>
+        <table>
+            <thead>
+                <tr>
+                    {% for header in table_headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table_data %}
+                    <tr>
+                        {% for item in row %}
+                            <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Graphique :</h3>
+        <img src="data:image/png;base64,{{ chart }}" alt="Chart">
+    </div>
+    <div class="footer">
+        <p>{{ footer }}</p>
+    </div>
+</body>
+</html>
